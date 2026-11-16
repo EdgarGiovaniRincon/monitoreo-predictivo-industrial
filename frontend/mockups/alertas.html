@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alertas · Monitoreo de planta</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="shell"><nav class="side"><h1>Monitoreo de planta</h1><a href="menu.html">Panel principal</a><a href="equipos.html">Equipos</a><a href="alertas.html" class=on>Alertas</a><a href="historial.html">Historial</a><a class="out" href="login.html">Cerrar sesión</a></nav>
+<main><h2>Alertas</h2>
+<div class="card alert"><div><b>Motor M-03: rodamiento con desgaste</b><p>Vibración fuera del límite. Falla estimada en 6 días.</p></div><span class="tag bad">Riesgo alto</span><button class="at">Marcar atendida</button></div>
+<div class="card alert"><div><b>Bomba B-12: temperatura alta</b><p>Posible falta de lubricación. Falla estimada en 15 días.</p></div><span class="tag warn">Atención</span><button class="at">Marcar atendida</button></div>
+<div class="card alert"><div><b>Compresor C-02: consumo eléctrico irregular</b><p>Revisar carga del motor en la próxima parada.</p></div><span class="tag warn">Atención</span><button class="at">Marcar atendida</button></div></main></div><script>document.querySelectorAll('.at').forEach(b=>b.onclick=()=>{b.closest('.alert').classList.add('done');b.textContent='Atendida';b.disabled=true})</script></body></html>

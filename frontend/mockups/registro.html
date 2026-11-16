@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crear cuenta · Monitoreo de planta</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="auth"><section class="hero"><h1>Monitoreo de planta</h1><p>Crea tu cuenta para ver las alertas y las predicciones de tus equipos.</p></section>
+<form id="f"><h2>Crear cuenta</h2>
+<label>Nombre completo<input name="nombre" required></label>
+<label>Correo<input type="email" name="correo" required></label>
+<label>Rol<select name="rol"><option>Técnico de mantenimiento</option><option>Supervisor de planta</option><option>Administrador</option></select></label>
+<label>Contraseña<input type="password" id="p1" minlength="8" required></label>
+<label>Confirmar contraseña<input type="password" id="p2" required></label>
+<p class="err" id="e"></p><button>Crear cuenta</button><p>¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></p></form></div><script>document.getElementById('f').onsubmit=e=>{e.preventDefault();if(p1.value!==p2.value){document.getElementById('e').textContent='Las contraseñas no coinciden.';return}location.href='login.html'}</script></body></html>

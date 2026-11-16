@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Historial · Monitoreo de planta</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="shell"><nav class="side"><h1>Monitoreo de planta</h1><a href="menu.html">Panel principal</a><a href="equipos.html">Equipos</a><a href="alertas.html">Alertas</a><a href="historial.html" class=on>Historial</a><a class="out" href="login.html">Cerrar sesión</a></nav>
+<main><div class="top"><h2>Historial de alertas</h2><button id="csv">Exportar CSV</button></div>
+<div class="filters"><label>Desde<input type="date"></label><label>Hasta<input type="date"></label><label>Equipo<select><option>Todos</option><option>Motor M-01</option><option>Motor M-03</option><option>Bomba B-12</option></select></label><button class="sec">Filtrar</button></div>
+<div class="wrap"><table id="t"><tr><th>Fecha</th><th>Equipo</th><th>Causa</th><th>Resultado</th></tr>
+<tr><td>2026-11-10</td><td>Motor M-03</td><td>Rodamiento</td><td>Alerta abierta</td></tr>
+<tr><td>2026-11-02</td><td>Bomba B-12</td><td>Temperatura alta</td><td>Atendida</td></tr>
+<tr><td>2026-10-21</td><td>Motor M-01</td><td>Desbalanceo</td><td>Falla evitada</td></tr></table></div></main></div><script>csv.onclick=()=>{const r=[...t.rows].map(x=>[...x.cells].map(c=>'"'+c.textContent+'"').join(','));const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([r.join('\n')],{type:'text/csv'}));a.download='historial.csv';a.click()}</script></body></html>
