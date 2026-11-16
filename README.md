@@ -30,4 +30,4 @@ Python, TensorFlow/Keras, MQTT, InfluxDB, FastAPI, React, Docker y GitHub.
 Historias de usuario, backlog y sprints: ver [docs/backlog.md](docs/backlog.md) y la pestaña **Projects** del repositorio.
 
 ## Equipo
-[Integrantes del equipo]
+Rincon Valdez Edgar Giovani
